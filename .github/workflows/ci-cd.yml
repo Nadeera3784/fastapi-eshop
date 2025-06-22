@@ -24,6 +24,7 @@ jobs:
       - name: Run tests
         run: |
           pip install pytest httpx
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
           pytest
 
   build:
